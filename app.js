@@ -57,9 +57,10 @@ Test this function by hand in the console to get it working, and when you think 
 function sumAndMultiply(a,b,c){ //eslint-disable-line
   var theSum = sum(sum(a, b)[0], c)[0];
   var product = multiply(multiply(a, b)[0], c)[0];
-  var sumMessage = a + ' and ' + b + ' and ' + c + ' sum to ' + theSum + '.';
-  var productMessage = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + product + '.';
+  var sumMessage = sum(sum(sum(sum(sum(sum(sum(a, ' and ')[0], b)[0], ' and ')[0], c)[0], ' sum to ')[0], theSum)[0], '.')[0];
+  var productMessage = sum(sum(sum(sum(sum(sum(sum(sum('The product of ', a)[0], ' and ')[0], b)[0], ' and ')[0], c)[0], ' is ')[0], product)[0], '.')[0];
   return [theSum, product, sumMessage, productMessage];
+  // Problem 3 fixed, used + operator on first solution.
 }
 
 // TODO: Here is the test for sumAndMultiply(); uncomment it to run it
